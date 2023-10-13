@@ -16,7 +16,7 @@ logging.basicConfig(
 )
 
 
-def on_created_event_handler(event: FileCreatedEvent):
+def on_created_event_handler(event: FileCreatedEvent) -> None:
     logger = logging.getLogger()
     logger.debug(f"The file {event.src_path} was created!")
 
