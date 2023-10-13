@@ -1,9 +1,17 @@
 import sys
-from packages.configuration.config import frame_name_pattern
+import zmq
+from packages.configuration.config import frame_name_pattern, ZMQ_NEW_FILE_PUB_PORT
 import logging
 from pathlib import Path
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler, FileCreatedEvent
+from packages.communication.messages import NewFileFoundMsg
+import json
+
+
+context = zmq.Context()
+socket = context.socket(zmq.PUB)
+socket.bind(f"tcp://127.0.0.1:{ZMQ_NEW_FILE_PUB_PORT}")
 
 file_handler = logging.FileHandler(filename="filemon.log")
 stdout_handler = logging.StreamHandler(stream=sys.stdout)
@@ -19,6 +27,8 @@ logging.basicConfig(
 def on_created_event_handler(event: FileCreatedEvent) -> None:
     logger = logging.getLogger()
     logger.debug(f"The file {event.src_path} was created!")
+    msg = NewFileFoundMsg(sender="tbd", path=event.src_path)
+    socket.send_string(json.dumps(msg.to_dict()))
 
 
 def watch_and_notify(working_dir: Path) -> Observer:

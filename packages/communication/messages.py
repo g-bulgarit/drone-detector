@@ -1,5 +1,4 @@
 from dataclasses import dataclass, asdict
-from pathlib import Path
 
 
 @dataclass
@@ -11,5 +10,5 @@ class BaseMessage:
 
 
 @dataclass
-class NewFileFound(BaseMessage):
-    path: Path
+class NewFileFoundMsg(BaseMessage):
+    path: str
