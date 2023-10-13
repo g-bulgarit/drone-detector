@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net" modified="2023-10-13T15:57:49.481Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="vjpTLZg7UCR4k0dR0dpa" version="22.0.4" type="device">
+  <diagram name="Page-1" id="-3RA74XSyBLGnwEmJgR_">
+    <mxGraphModel dx="2284" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-79" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="680" width="205" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-49" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="380" width="370" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="380" width="370" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-14" value="frames" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-1" target="nrCFW6QNQg-WlauPwQMk-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-1" target="nrCFW6QNQg-WlauPwQMk-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-1" value="V4L2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="425" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-3" value="CSI Camera&lt;br&gt;/dev/video0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-12" value="Frame Grabbing" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="380" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-13" target="nrCFW6QNQg-WlauPwQMk-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-13" value="GStreamer&lt;br&gt;to file" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="480" y="425" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-52" target="nrCFW6QNQg-WlauPwQMk-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-52" value="New-file listener" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="300" y="425" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-63" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="520" width="370" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-64" value="frames" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-66" target="nrCFW6QNQg-WlauPwQMk-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-66" target="nrCFW6QNQg-WlauPwQMk-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-66" value="V4L2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="565" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-67" value="CSI Camera&lt;br&gt;/dev/video0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="565" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-68" value="Frame Grabbing" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="520" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-69" target="nrCFW6QNQg-WlauPwQMk-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-69" value="GStreamer&lt;br&gt;to file" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="480" y="565" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-86" value="Frame + Metadata&lt;br&gt;(Or part of frame)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-70" target="nrCFW6QNQg-WlauPwQMk-83">
+          <mxGeometry x="-0.3684" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-70" value="Preprocessing (Split, histogram...)&lt;br&gt;TBD" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="130" y="480" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-71" value="Preprocessing" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="55" y="380" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-75" target="nrCFW6QNQg-WlauPwQMk-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-75" value="New-file listener" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="300" y="565" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-80" value="Detection" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="55" y="680" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-89" value="Detection + Metadata" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-83" target="nrCFW6QNQg-WlauPwQMk-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-83" value="YOLONAS or equivalent" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="125" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-85" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="680" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-87" target="nrCFW6QNQg-WlauPwQMk-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-87" value="ZMQ Subscriber" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="490" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-91" value="Metadata&lt;br&gt;(On detection)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nrCFW6QNQg-WlauPwQMk-88" target="nrCFW6QNQg-WlauPwQMk-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-88" value="ZMQ Publisher" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="125" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-90" value="GPIO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="680" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-92" value="GPIO Handler" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="660" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-94" value="&lt;b&gt;Limitations&lt;/b&gt;:&lt;br&gt;1. 12MP images are large, difficult to push into neural network,&lt;br&gt;current idea is to split the image into chunks and feed the chunks&lt;br&gt;into the NN.&lt;br&gt;&lt;br&gt;2. It&#39;s possible to stream the frames over RTSP instead of looking&lt;br&gt;for new files in a directory - for low framerate it&#39;s the &lt;b&gt;better &lt;/b&gt;solution" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="830" width="380" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nrCFW6QNQg-WlauPwQMk-95" value="&lt;div&gt;v4l2-ctl -d /dev/video0 --set-fmt-video=width=2592,height=1944,pixelformat=RGB3 -c auto_exposure=1 -c scene_mode=11 -c white_balance_auto_preset=0 -c video_bitrate_mode=1 -c video_bitrate=25000&lt;/div&gt;&lt;div&gt;000 --stream-mmap --stream-count=1000&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-139" y="994" width="1109" height="41" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
