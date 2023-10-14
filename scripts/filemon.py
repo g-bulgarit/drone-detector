@@ -52,7 +52,7 @@ def watch_and_notify(working_dir: Path, name: str) -> Observer:
 
 
 if __name__ == "__main__":
-    log_directory.mkdir(exist_ok=True, parents=True)
+    LOG_DIRECTORY.mkdir(exist_ok=True, parents=True)
     camera_frames_dir = Path(cam0_file_stream_path)
     camera_frames_dir.mkdir(exist_ok=True, parents=True)
     current_dir_observer = watch_and_notify(working_dir=camera_frames_dir, name="CAM0")
