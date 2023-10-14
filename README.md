@@ -4,6 +4,8 @@
 
 Preliminary system architecture can be found under `docs/`.
 
+📢 Currently, the code **must run on a 64-bit raspbian OS**! 📢 
+
 ## Installation
 
 In a virtual environment, install this package in **editable** mode:
