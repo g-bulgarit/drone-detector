@@ -48,7 +48,7 @@ def watch_and_notify(working_dir: Path, name: str) -> Observer:
 
 
 if __name__ == "__main__":
-    my_dir = Path(r"D:\Code\drone-detection")
+    my_dir = Path(r"D:\Code\drone-detection\frames")
     current_dir_observer = watch_and_notify(working_dir=my_dir, name="CAM0")
     current_dir_observer.start()
     try:
