@@ -1,5 +1,11 @@
 # Drone Detector
 
+Capture images from a camera in full resolution and attempt to detect anomalies in the sky.
+
+<div align=center>
+    <img src="https://i.imgur.com/VfOyigA.png">
+</div>
+
 ## Documentation
 
 Preliminary system architecture can be found under `docs/`.
