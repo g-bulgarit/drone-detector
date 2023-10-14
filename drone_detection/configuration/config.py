@@ -2,9 +2,14 @@ from pathlib import Path
 
 frame_name_pattern = "*.jpg"
 
+# Detection
+KERNEL_SIZE = 10
+NUM_DETECTIONS = 3
+
 # ZMQ
 ZMQ_NEW_FILE_PUB_PORT = 8880
 
+# General
 log_directory = Path("/tmp/logs")
 
 # Camera 0
