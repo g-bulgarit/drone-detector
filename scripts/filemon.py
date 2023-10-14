@@ -16,27 +16,27 @@ context = zmq.Context()
 socket = context.socket(zmq.PUB)
 socket.bind(f"tcp://127.0.0.1:{ZMQ_NEW_FILE_PUB_PORT}")
 
-file_handler = logging.FileHandler(filename="filemon.log")
-stdout_handler = logging.StreamHandler(stream=sys.stdout)
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="[%(asctime)s] | %(levelname)s | %(message)s",
-    datefmt="%H:%M:%S",
-    handlers=[file_handler, stdout_handler],
-)
+def watch_and_notify(working_dir: Path, name: str) -> Observer:
+    file_handler = logging.FileHandler(filename=f"logs/filemon_{name}.log")
+    stdout_handler = logging.StreamHandler(stream=sys.stdout)
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format="[%(asctime)s] | %(levelname)s | %(message)s",
+        datefmt="%H:%M:%S",
+        handlers=[file_handler, stdout_handler],
+    )
 
-
-def on_created_event_handler(event: FileCreatedEvent) -> None:
-    logger = logging.getLogger()
-    logger.debug(f"The file {event.src_path} was created!")
-    msg = NewFileFoundMsg(sender="tbd", path=event.src_path)
-    socket.send_string(json.dumps(msg.to_dict()))
-
-
-def watch_and_notify(working_dir: Path) -> Observer:
     logger = logging.getLogger()
     logger.debug(f"Started logging new files at {working_dir}")
+
+    # Nest closure to retain specific parameters in thread
+    def on_created_event_handler(event: FileCreatedEvent) -> None:
+        logger = logging.getLogger()
+        logger.debug(f"{name}: The file {event.src_path} was created!")
+        msg = NewFileFoundMsg(sender=name, path=event.src_path)
+        socket.send_string(json.dumps(msg.to_dict()))
+
     new_file_handler = PatternMatchingEventHandler(patterns=[frame_name_pattern])
     new_file_handler.on_created = on_created_event_handler
 
@@ -49,7 +49,7 @@ def watch_and_notify(working_dir: Path) -> Observer:
 
 if __name__ == "__main__":
     my_dir = Path(r"D:\Code\drone-detection")
-    current_dir_observer = watch_and_notify(working_dir=my_dir)
+    current_dir_observer = watch_and_notify(working_dir=my_dir, name="CAM0")
     current_dir_observer.start()
     try:
         while True:
