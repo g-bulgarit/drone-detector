@@ -1,7 +1,7 @@
 import zmq
 import json
 
-from packages.configuration.config import ZMQ_NEW_FILE_PUB_PORT
+from drone_detection.configuration.config import ZMQ_NEW_FILE_PUB_PORT
 
 if __name__ == "__main__":
     context = zmq.Context()

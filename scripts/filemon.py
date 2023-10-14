@@ -1,11 +1,14 @@
 import sys
 import zmq
-from packages.configuration.config import frame_name_pattern, ZMQ_NEW_FILE_PUB_PORT
+from drone_detection.configuration.config import (
+    frame_name_pattern,
+    ZMQ_NEW_FILE_PUB_PORT,
+)
 import logging
 from pathlib import Path
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler, FileCreatedEvent
-from packages.communication.messages import NewFileFoundMsg
+from drone_detection.communication.messages import NewFileFoundMsg
 import json
 
 
