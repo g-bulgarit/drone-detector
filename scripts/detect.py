@@ -22,4 +22,5 @@ if __name__ == "__main__":
         # Run batched inference on a list of images
         results = model(frame_path)  # return a list of Results objects
         config = dict(monitored_classes_ids=[5], detection_confidence_threshold=0.8)
-        is_drone(results[0], config=config)
+        detection_result = is_drone(results[0], config=config)
+        print(f"Drone detected? {detection_result}")
