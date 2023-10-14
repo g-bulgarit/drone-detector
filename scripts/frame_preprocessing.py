@@ -5,7 +5,7 @@ from pathlib import Path
 from drone_detection.image_processing.preprocessing import preprocess_frame
 from drone_detection.configuration.config import (
     ZMQ_NEW_FILE_PUB_PORT,
-    cam0_preprocessing_stream_path,
+    CAM0_PREPROCESSING_STREAM_PATH,
 )
 
 
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     socket = context.socket(zmq.SUB)
     socket.connect(f"tcp://127.0.0.1:{ZMQ_NEW_FILE_PUB_PORT}")
     socket.subscribe("")
-    output_dir = Path(cam0_preprocessing_stream_path)
+    output_dir = Path(CAM0_PREPROCESSING_STREAM_PATH)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     while True:
