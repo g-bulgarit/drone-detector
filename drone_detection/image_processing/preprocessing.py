@@ -30,6 +30,6 @@ def preprocess_frame(frame_path: Path, output_dir: Path) -> None:
     for y in range(0, h, tiley):
         for x in range(0, w, tilex):
             output_filename = f"{output_dir}/{image_frame_count}_{tile_counter}.jpg"
-            tile = image[y: y + tiley, x: x + tilex]
+            tile = image[y : y + tiley, x : x + tilex]
             cv2.imwrite(filename=output_filename, img=tile)
             tile_counter += 1
