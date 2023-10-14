@@ -9,6 +9,7 @@ Preliminary system architecture can be found under `docs/`.
 In a virtual environment, install this package in **editable** mode:
 ```
 pip install -e .
+bash install_opencv_dependencies.sh
 pip install -r requirements.txt
 ```
 
