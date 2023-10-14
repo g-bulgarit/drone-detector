@@ -10,7 +10,7 @@ NUM_DETECTIONS = 3
 ZMQ_NEW_FILE_PUB_PORT = 8880
 
 # General
-log_directory = Path("/tmp/logs")
+LOG_DIRECTORY = Path("/tmp/logs")
 
 # Camera 0
 cam0_file_stream_path = Path("/tmp/frames/cam0_full")

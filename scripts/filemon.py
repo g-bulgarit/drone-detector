@@ -4,7 +4,7 @@ from drone_detection.configuration.config import (
     frame_name_pattern,
     ZMQ_NEW_FILE_PUB_PORT,
     cam0_file_stream_path,
-    log_directory,
+    LOG_DIRECTORY,
 )
 import logging
 from pathlib import Path
@@ -20,7 +20,7 @@ socket.bind(f"tcp://127.0.0.1:{ZMQ_NEW_FILE_PUB_PORT}")
 
 
 def watch_and_notify(working_dir: Path, name: str) -> Observer:
-    file_handler = logging.FileHandler(filename=f"{log_directory}/filemon_{name}.log")
+    file_handler = logging.FileHandler(filename=f"{LOG_DIRECTORY}/filemon_{name}.log")
     stdout_handler = logging.StreamHandler(stream=sys.stdout)
     logging.basicConfig(
         format="[%(asctime)s] | %(levelname)s | %(message)s",
