@@ -17,7 +17,7 @@ def generate_random_jpg(save_dir: Path, filename: str, shape: tuple) -> None:
 
 
 if __name__ == "__main__":
-    framerate = 10  # frames / sec
+    framerate = 1  # frames / sec
     frame_counter = 0
     save_dir = Path(r"D:\Code\drone-detection\frames")
     resolution = (480, 640)
