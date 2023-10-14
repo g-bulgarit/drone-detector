@@ -2,7 +2,9 @@ import zmq
 import json
 import logging
 import sys
-from drone_detection.detection.find_by_correlation import find_anomalies
+from drone_detection.detection.find_by_correlation import (
+    find_anomalies,
+)
 from drone_detection.configuration.config import (
     ZMQ_NEW_FILE_PUB_PORT,
     KERNEL_SIZE,

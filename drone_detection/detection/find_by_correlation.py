@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+from matplotlib.figure import Figure
 
 from drone_detection.detection.detection_types import BoundingBox
 
@@ -43,12 +44,16 @@ def find_anomalies(image_path: str, kernel_size: int, k: int) -> list[BoundingBo
     return bounding_boxes
 
 
-def plot_anomalies_on_image(image_path: str, bounding_boxes: list[BoundingBox]):
+def draw_anomalies_on_image(
+    image_path: str, bounding_boxes: list[BoundingBox]
+) -> Figure:
     image = cv2.imread(image_path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    plt.figure(figsize=(8, 8))
-    plt.imshow(image)
-    plt.axis("off")
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.gca()
+
+    ax.imshow(image)
+    ax.axis("off")
 
     for box in bounding_boxes:
         rect_min = patches.Rectangle(
@@ -68,10 +73,10 @@ def plot_anomalies_on_image(image_path: str, bounding_boxes: list[BoundingBox]):
             facecolor="none",
         )
 
-        plt.gca().add_patch(rect_min)
-        plt.gca().add_patch(rect_max)
+        ax.add_patch(rect_min)
+        ax.add_patch(rect_max)
 
-    plt.show()
+    return fig
 
 
 if __name__ == "__main__":
@@ -81,5 +86,6 @@ if __name__ == "__main__":
     k = 3  # Specify the number of K smallest and K largest correlations
 
     anomalies = find_anomalies(image_path, kernel_size, k)
-    plot_anomalies_on_image(image_path, anomalies)
+    fig = draw_anomalies_on_image(image_path, anomalies)
+    fig.savefig("a.jpg")
     pass
