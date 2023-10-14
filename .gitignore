@@ -2,3 +2,4 @@ venv/*
 *.pyc
 *.jpg
 *.log
+*.egg-info
