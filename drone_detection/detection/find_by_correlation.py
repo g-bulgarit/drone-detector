@@ -87,5 +87,4 @@ if __name__ == "__main__":
 
     anomalies = find_anomalies(image_path, kernel_size, k)
     fig = draw_anomalies_on_image(image_path, anomalies)
-    fig.savefig("a.jpg")
-    pass
+    fig.show()
